@@ -1,0 +1,6 @@
+services:
+  node.node_author_context:
+    class: Drupal\test_contexts\ContextProvider\NodeAuthorContext
+    arguments: ['@current_route_match', '@entity.manager']
+    tags:
+      - { name: 'context_provider' }
